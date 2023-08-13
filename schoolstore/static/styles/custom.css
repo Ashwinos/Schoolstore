@@ -1,0 +1,232 @@
+body{
+    font-family: 'Roboto', sans-serif;
+
+
+
+}
+
+
+
+.nav-item {
+    letter-spacing: .2em;
+    font-size: 14px;
+    text-transform: uppercase;
+
+
+}
+
+.dropdown-item{
+    letter-spacing: .2em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+
+/** catg **/
+
+.my_row_class{
+    padding-top:15px;
+
+}
+
+.my_row_class .mx-auto{
+    color:#000;
+    font-size: 12px;
+}
+
+.my_image{
+    width:100%;
+    height:auto;
+}
+
+.my_title{
+   font-size: 16px;
+   text-transform: uppercase;
+   letter-spacing: .2em;
+}
+.my_image_padding{
+    padding:5px;
+}
+
+.my_bottom_margin{
+    margin-bottom:10px;
+
+}
+
+.card-body h4 {
+    font-size:14px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+
+}
+
+.my_prod_my_row_class{
+    padding-top:15px;
+    padding-bottom:10px;
+}
+
+.my_prod_row_class .mx-auto{
+    color=#000;
+    font-size:12px;
+    text-decoration:none;
+
+}
+
+.my_prod_title{
+     font-size:16px;
+     text-transform: uppercase;
+     letter-spacing: .2em;
+     padding-top:15px;
+     padding-bottom:10px;
+}
+
+.my_prod_text{
+    padding-right:20px;
+
+}
+.btn-success{
+    margin-bottom:15px;
+}
+
+.my_search_text{
+    padding-top:20px;
+
+}
+.my_custom_table{
+    min-width:400px;
+    font-size:14px;
+
+}
+.my_custom_thead{
+    font-weight:normal;
+    text-transform:uppercase;
+    letter-spacing: .2em;
+    background-color:#f8f9a!important;
+}
+
+.custom_a{
+    text-decoration:none;
+}
+.custom_icon{
+    text-decoration:none;
+    color:#868e96 !important;
+
+}
+
+.my_custom_button{
+    margin-top:5px;
+}
+
+
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+/* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+/* header html */
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{height: 900px;}
+header {
+	background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 200deg, olivedrab 25%, greenyellow 100%);
+
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+h3, p {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+button:hover{
+	cursor: pointer;
+}

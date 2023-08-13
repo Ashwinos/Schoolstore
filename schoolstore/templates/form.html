@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="msg" method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="dob">DOB:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="mail">Mail ID:</label>
+        <input type="email" id="mail" name="mail" required><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="" disabled selected>Select Department</option>
+            <option value="commerce">Commerce</option>
+            <option value="science">Science</option>
+            <option value="arts">Arts</option>
+        </select><br><br>
+
+        <label for="courses">Courses:</label>
+        <select id="courses" name="courses" required>
+            <option value="" disabled selected>Select Department First</option>
+            <option value="" disabled selected>Select Department</option>
+            <option value="commerce">Commerce</option>
+            <option value="science">Science</option>
+            <option value="arts">Arts</option>
+        </select><br><br>
+
+        <label for="purpose">Purpose:</label>
+        <select id="purpose" name="purpose" required>
+            <option value="" disabled selected>Select Purpose</option>
+            <option value="enquiry">Enquiry</option>
+            <option value="place-order">Place Order</option>
+            <option value="return">Return</option>
+        </select><br><br>
+
+
+
+        <label>Materials Provide:</label><br>
+        <input type="checkbox" id="notebook" name="materials[]" value="debit-notebook">
+        <label for="notebook">Debit Note Book</label><br>
+        <input type="checkbox" id="pen" name="materials[]" value="pen">
+        <label for="pen">Pen</label><br>
+        <input type="checkbox" id="exam-papers" name="materials[]" value="exam-papers">
+        <label for="exam-papers">Exam Papers</label><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+    <form action="logout" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Logout">
+    </form>
+<script>
+        // JavaScript to populate dependent dropdown for courses based on department
+        const departmentDropdown = document.getElementById('department');
+        const coursesDropdown = document.getElementById('courses');
+
+        departmentDropdown.addEventListener('change', () => {
+            coursesDropdown.innerHTML = '<option value="" disabled selected>Select Course</option>';
+            if (departmentDropdown.value === 'commerce') {
+                const commerceCourses = ['BBA', 'BCom', 'MCom'];
+                commerceCourses.forEach(course => {
+                    const option = document.createElement('option');
+                    option.value = course.toLowerCase();
+                    option.textContent = course;
+                    coursesDropdown.appendChild(option);
+                });
+            } else if (departmentDropdown.value === 'science') {
+                const scienceCourses = ['BSc', 'MSc', 'PhD'];
+                scienceCourses.forEach(course => {
+                    const option = document.createElement('option');
+                    option.value = course.toLowerCase();
+                    option.textContent = course;
+                    coursesDropdown.appendChild(option);
+                });
+            } else if (departmentDropdown.value === 'arts') {
+                const artsCourses = ['BA', 'MA', 'Fine Arts'];
+                artsCourses.forEach(course => {
+                    const option = document.createElement('option');
+                    option.value = course.toLowerCase();
+                    option.textContent = course;
+                    coursesDropdown.appendChild(option);
+                });
+            }
+        });
+
+    </script>
+</body>
+</html>
